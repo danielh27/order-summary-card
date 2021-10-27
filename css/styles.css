@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700;900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(225, 100%, 94%);
+    background-image: url(../images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.wrapper {
+    width: 25vw;
+    min-width: 450px;
+    height: 70vh;
+    min-height: 655px;
+    background-color: #fff;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 1fr 0.6fr 1fr;
+    grid-template-areas: "image"
+                         "info"
+                         "plan"
+                         "buttons";
+}
+
+.card-image {
+    grid-area: image ;
+    background-image: url(../images/illustration-hero.svg);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card-info {
+    grid-area: info;
+    text-align: center;
+    margin-top: 25px;
+    padding: 0px 45px;
+}
+
+.card-info h2 {
+    font-weight: 900;
+}
+
+.card-info p {
+    color: grey;
+    font-weight: 500;
+}
+
+.card-plan {
+    grid-area: plan;
+    background-color: hsl(225, 100%, 98%);
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+}
+
+.card-plan .text {
+    margin: 0px 100px 0px 20px;
+}
+
+.card-plan .button a {
+    font-weight: 700;
+    color: hsl(245, 75%, 52%);
+}
+
+.card-plan .button a:hover {
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+.icon:before {
+    content: url(../images/icon-music.svg);
+    margin-left: 20px;
+}
+
+.card-plan h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.card-plan p {
+    margin: 0;
+    font-size: 1rem;
+    color: grey;
+}
+
+.card-buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-buttons .payment {
+    width: 75%;
+    padding: 14px;
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    background-color: hsl(245, 75%, 52%);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card-buttons .payment:hover {
+    opacity: 0.5;
+}
+
+.card-buttons .cancel {
+    color: gray;
+    font-weight: 900;
+    font-size: 1rem;
+    border: none;
+    margin-top: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.card-buttons .cancel:hover {
+    color: rgb(36, 35, 35);
+}
